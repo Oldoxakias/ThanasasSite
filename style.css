@@ -24,7 +24,184 @@ body {
     position: relative;
     z-index: 1;
 }
+.company-title {
+    font-size: 4rem;
+    margin-bottom: 25px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.5),
+                 0 0 25px rgba(255, 255, 255, 0.3),
+                 2px 2px 4px rgba(0, 0, 0, 0.5);
+    animation: text-glow 2s ease-in-out infinite alternate;
+    position: relative;
+    padding-bottom: 20px;
+}
 
+.company-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 2px;
+    animation: line-pulse 2s infinite;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+@keyframes text-glow {
+    from {
+        text-shadow: 0 0 15px rgba(255, 255, 255, 0.5),
+                     0 0 25px rgba(255, 255, 255, 0.3),
+                     2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    to {
+        text-shadow: 0 0 25px rgba(255, 255, 255, 0.8),
+                     0 0 35px rgba(255, 255, 255, 0.5),
+                     3px 3px 6px rgba(0, 0, 0, 0.6);
+    }
+}
+
+@keyframes line-pulse {
+    0% { 
+        width: 120px;
+        opacity: 0.8;
+        background: rgba(255, 255, 255, 0.8);
+    }
+    50% { 
+        width: 150px;
+        opacity: 1;
+        background: rgba(255, 255, 255, 1);
+    }
+    100% { 
+        width: 120px;
+        opacity: 0.8;
+        background: rgba(255, 255, 255, 0.8);
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .company-title {
+        font-size: 2.5rem;
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.5),
+                   0 0 20px rgba(255, 255, 255, 0.3),
+                   2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    
+    .company-title::after {
+        width: 80px;
+        height: 3px;
+    }
+    
+    @keyframes line-pulse {
+        0% { width: 80px; }
+        50% { width: 100px; }
+        100% { width: 80px; }
+    }
+}.company-title {
+    font-size: 4rem;
+    margin-bottom: 25px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(45deg, #ffffff, #ffffff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3),
+                 0 0 20px rgba(0, 195, 255, 0.3);
+    animation: text-glow 2s ease-in-out infinite alternate;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.company-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, #ffffff, transparent);
+    border-radius: 2px;
+    animation: line-pulse 2s infinite;
+}
+
+@keyframes text-glow {
+    from {
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3),
+                     0 0 20px rgba(224, 224, 224, 0.3);
+    }
+    to {
+        text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.4),
+                     0 0 30px rgba(224, 224, 224, 0.3);
+    }
+}
+
+@keyframes line-pulse {
+    0% { width: 120px; opacity: 0.8; }
+    50% { width: 150px; opacity: 1; }
+    100% { width: 120px; opacity: 0.8; }
+}
+
+@media (max-width: 768px) {
+    .company-title {
+        font-size: 3rem;
+        padding-bottom: 15px;
+    }
+    
+    .company-title::after {
+        width: 80px;
+        height: 3px;
+    }
+    
+    @keyframes line-pulse {
+        0% { width: 80px; opacity: 0.8; }
+        50% { width: 100px; opacity: 1; }
+        100% { width: 80px; opacity: 0.8; }
+    }
+}.company-title {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.company-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: #ffffff;
+    border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+    .company-title {
+        font-size: 2.5rem;
+        padding-bottom: 10px;
+    }
+    
+    .company-title::after {
+        width: 60px;
+        height: 2px;
+    }
+
+}
 .title {
     font-size: 2.5rem;
     margin-bottom: 30px;
@@ -68,3 +245,4 @@ body {
         background-position: 65% center;
     }
 }
+
